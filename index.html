@@ -3,19 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <title>Zusammenfassung Modul 293</title>
-
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    header, nav, footer {
+      background-color: #f4f4f4;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    header h2, footer p {
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
   <header>
-    
+    <h2>Modul 293: Webentwicklung</h2>
   </header>
   <nav>
-    
+    <ul>
+      <li><a href="#section1">Einführung</a></li>
+      <li><a href="#section2">HTML-Grundlagen</a></li>
+      <li><a href="#section3">CSS-Grundlagen</a></li>
+      <li><a href="#section4">JavaScript-Grundlagen</a></li>
+      <li><a href="#section5">Formulare und Validierung</a></li>
+    </ul>
   </nav>
   <h1>Zusammenfassung Modul 293</h1>
 
+  <form action="https://it.bzz.ch/demo/formdata/index.php" method="post">
+    <fieldset>
+        <legend>Flughafen auswählen</legend>
+        <label for="abflughafen">Abflughafen:</label>
+        <select id="abflughafen" name="abflughafen" required>
+            <optgroup label="Deutschland">
+                <option value="Frankfurt">Frankfurt</option>
+                <option value="München">München</option>
+                <option value="Berlin">Berlin</option>
+            </optgroup>
+            <optgroup label="Österreich">
+                <option value="Wien">Wien</option>
+                <option value="Salzburg">Salzburg</option>
+            </optgroup>
+            <optgroup label="Italien">
+                <option value="Rom">Rom</option>
+                <option value="Mailand">Mailand</option>
+            </optgroup>
+            <optgroup label="Frankreich">
+                <option value="Paris">Paris</option>
+                <option value="Lyon">Lyon</option>
+            </optgroup>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Unterkunft auswählen</legend>
+        <label>
+            <input type="radio" name="unterkunft" value="Hotel" required> Hotel
+        </label>
+        <label>
+            <input type="radio" name="unterkunft" value="Ferienwohnung"> Ferienwohnung
+        </label>
+        <label>
+            <input type="radio" name="unterkunft" value="Hostel"> Hostel
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Zusatzleistungen auswählen</legend>
+        <label>
+            <input type="checkbox" name="zusatzleistungen[]" value="Reiseversicherung"> Reiseversicherung
+        </label>
+        <label>
+            <input type="checkbox" name="zusatzleistungen[]" value="Flughafentransfer"> Flughafentransfer
+        </label>
+        <label>
+            <input type="checkbox" name="zusatzleistungen[]" value="Zusätzliches Gepäck"> Zusätzliches Gepäck
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Reisezeitraum</legend>
+        <label for="reisebeginn">Anfangsdatum:</label>
+        <input type="date" id="reisebeginn" name="reisebeginn" required>
+
+        <label for="reiseende">Enddatum:</label>
+        <input type="date" id="reiseende" name="reiseende" required>
+
+        <label for="reisedauer">Reisedauer (in Tagen, 1-21):</label>
+        <input type="number" id="reisedauer" name="reisedauer" min="1" max="21" required>
+    </fieldset>
+
+    <fieldset>
+        <legend>Reisende Personen</legend>
+        <label for="anzahl_personen">Anzahl der Personen:</label>
+        <input type="number" id="anzahl_personen" name="anzahl_personen" min="1" required>
+    </fieldset>
+
+    <fieldset>
+        <legend>Fluggesellschaft auswählen</legend>
+        <label for="fluggesellschaft">Bevorzugte Fluggesellschaft:</label>
+        <select id="fluggesellschaft" name="fluggesellschaft" required>
+            <option value="Lufthansa">Lufthansa</option>
+            <option value="Swiss">Swiss</option>
+            <option value="Air France">Air France</option>
+            <option value="Alitalia">Alitalia</option>
+            <option value="Austrian Airlines">Austrian Airlines</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Optionale Dienstleistungen</legend>
+        <label>
+            <input type="checkbox" name="optionale_dienstleistungen[]" value="Priority-Check-In"> Priority-Check-In
+        </label>
+        <label>
+            <input type="checkbox" name="optionale_dienstleistungen[]" value="Zusätzliches Handgepäck"> Zusätzliches Handgepäck
+        </label>
+        <label>
+            <input type="checkbox" name="optionale_dienstleistungen[]" value="Mietwagen"> Mietwagen
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Reiseziel</legend>
+        <label for="reiseziel">Reiseziel:</label>
+        <input list="reiseziele" id="reiseziel" name="reiseziel" required>
+        <datalist id="reiseziele">
+            <option value="New York">
+            <option value="London">
+            <option value="Paris">
+            <option value="Tokyo">
+            <option value="Sydney">
+        </datalist>
+    </fieldset>
+
+    <fieldset>
+        <legend>Kontaktinformation</legend>
+        <label for="email">E-Mail-Adresse:</label>
+        <input type="email" id="email" name="email" required>
+    </fieldset>
+
+    <button type="reset">Zurücksetzen</button>
+    <button type="submit">Absenden</button>
+  </form>
+
   <footer>
-    
+    <p>&copy; 2024 Modul 293 - Webentwicklung</p>
   </footer>
 </body>
 </html>
